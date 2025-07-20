@@ -73,6 +73,12 @@ public class ScientificCalculator {
                 case 15:
                     performFloor(scanner);
                     break;
+                case 16:
+                    performMin(scanner);
+                    break;
+                case 17:
+                    performMax(scanner);
+                    break;
                 case 0:
                     running = false; System.out.println("Exiting...");
                     break;
@@ -101,6 +107,9 @@ public class ScientificCalculator {
         System.out.println("13. Round");
         System.out.println("14. Ceiling");
         System.out.println("15. Floor");
+        System.out.println("16. Minimum");
+        System.out.println("17. Maximum");
+        System.out.println("0. Exit");
     }
 
     // Reading inputs from the users for different kind of operations
@@ -164,6 +173,15 @@ public class ScientificCalculator {
     public static double floorNumber(double num) {
         return Math.floor(num);
     }
+
+    public static double findMin(double num1, double num2) {
+        return Math.min(num1, num2);
+    }
+
+    public static double findMax(double num1, double num2) {
+        return Math.max(num1, num2);
+    }
+
 
 
     //Addition method
@@ -368,7 +386,36 @@ public class ScientificCalculator {
         }
     }
 
+    //Min method
+    private static void performMin(Scanner scanner) {
+        try {
+            System.out.print("Enter first number: ");
+            double a = scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double b = scanner.nextDouble();
+            System.out.println("Result: " + findMin(a, b));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
 
-
-
+    //Max method
+    private static void performMax(Scanner scanner) {
+        try {
+            System.out.print("Enter first number: ");
+            double a = scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double b = scanner.nextDouble();
+            System.out.println("Result: " + findMax(a, b));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
 }
+
+
+
+
+
