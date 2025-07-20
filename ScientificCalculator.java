@@ -193,7 +193,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + add(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -207,7 +207,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + subtract(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -221,7 +221,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + multiply(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -235,7 +235,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + divide(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
@@ -250,7 +250,7 @@ public class ScientificCalculator {
             if (a < 0) throw new ArithmeticException("Cannot take square root of negative number");
             System.out.println("Result: " + calculateSquareRoot(a));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
@@ -266,7 +266,7 @@ public class ScientificCalculator {
             double exp = scanner.nextDouble();
             System.out.println("Result: " + power(base, exp));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -278,7 +278,7 @@ public class ScientificCalculator {
             double angle = scanner.nextDouble();
             System.out.println("Result: " + calculateSine(angle));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -290,7 +290,7 @@ public class ScientificCalculator {
             double angle = scanner.nextDouble();
             System.out.println("Result: " + calculateCosine(angle));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -302,7 +302,7 @@ public class ScientificCalculator {
             double angle = scanner.nextDouble();
             System.out.println("Result: " + calculateTangent(angle));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -315,7 +315,7 @@ public class ScientificCalculator {
             if (num <= 0) throw new ArithmeticException("Logarithm undefined for zero or negative numbers.");
             System.out.println("Result: " + calculateNaturalLogarithm(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
@@ -330,7 +330,7 @@ public class ScientificCalculator {
             if (num <= 0) throw new ArithmeticException("Logarithm undefined for zero or negative numbers.");
             System.out.println("Result: " + calculateLogarithmBase10(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
@@ -344,7 +344,7 @@ public class ScientificCalculator {
             double num = scanner.nextDouble();
             System.out.println("Result: " + calculateAbsoluteValue(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -356,7 +356,7 @@ public class ScientificCalculator {
             double num = scanner.nextDouble();
             System.out.println("Result: " + roundNumber(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -368,7 +368,7 @@ public class ScientificCalculator {
             double num = scanner.nextDouble();
             System.out.println("Result: " + ceilingNumber(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -381,7 +381,7 @@ public class ScientificCalculator {
             double num = scanner.nextDouble();
             System.out.println("Result: " + floorNumber(num));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -395,7 +395,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + findMin(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
@@ -409,7 +409,7 @@ public class ScientificCalculator {
             double b = scanner.nextDouble();
             System.out.println("Result: " + findMax(a, b));
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input!");
+            System.out.println("Invalid input! Please enter a valid number");
             scanner.next();
         }
     }
