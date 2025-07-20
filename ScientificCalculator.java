@@ -58,6 +58,9 @@ public class ScientificCalculator {
                 case 10:
                     performNaturalLogarithm(scanner);
                     break;
+                case 11:
+                    performLogarithmBase10(scanner);
+                    break;
                 case 0:
                     running = false; System.out.println("Exiting...");
                     break;
@@ -81,6 +84,7 @@ public class ScientificCalculator {
         System.out.println("8. Cosine");
         System.out.println("9. Tangent");
         System.out.println("10. Natural Logarithm (ln)");
+        System.out.println("11. Logarithm Base 10 (log10)");
     }
 
     // Reading inputs from the users for different kind of operations
@@ -123,6 +127,10 @@ public class ScientificCalculator {
 
     public static double calculateNaturalLogarithm(double num) {
         return Math.log(num);
+    }
+
+    public static double calculateLogarithmBase10(double num) {
+        return Math.log10(num);
     }
 
     //Addition method
@@ -255,6 +263,21 @@ public class ScientificCalculator {
             double num = scanner.nextDouble();
             if (num <= 0) throw new ArithmeticException("Logarithm undefined for zero or negative numbers.");
             System.out.println("Result: " + calculateNaturalLogarithm(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    //Logarithm Base 10 method
+    private static void performLogarithmBase10(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            if (num <= 0) throw new ArithmeticException("Logarithm undefined for zero or negative numbers.");
+            System.out.println("Result: " + calculateLogarithmBase10(num));
         } catch (InputMismatchException e) {
             System.out.println("Invalid input!");
             scanner.next();
