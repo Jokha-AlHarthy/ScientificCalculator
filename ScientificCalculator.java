@@ -52,6 +52,9 @@ public class ScientificCalculator {
                 case 8:
                     performCosine(scanner);
                     break;
+                case 9:
+                    performTangent(scanner);
+                    break;
                 case 0:
                     running = false; System.out.println("Exiting...");
                     break;
@@ -73,6 +76,7 @@ public class ScientificCalculator {
         System.out.println("6. Power");
         System.out.println("7. Sine");
         System.out.println("8. Cosine");
+        System.out.println("9. Tangent");
     }
 
     // Reading inputs from the users for different kind of operations
@@ -107,6 +111,10 @@ public class ScientificCalculator {
 
     public static double calculateCosine(double degrees) {
         return Math.cos(Math.toRadians(degrees));
+    }
+
+    public static double calculateTangent(double degrees) {
+        return Math.tan(Math.toRadians(degrees));
     }
 
     //Addition method
@@ -214,6 +222,18 @@ public class ScientificCalculator {
             System.out.print("Enter angle in degrees: ");
             double angle = scanner.nextDouble();
             System.out.println("Result: " + calculateCosine(angle));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
+
+    //Tangent (degree) method
+    private static void performTangent(Scanner scanner) {
+        try {
+            System.out.print("Enter angle in degrees: ");
+            double angle = scanner.nextDouble();
+            System.out.println("Result: " + calculateTangent(angle));
         } catch (InputMismatchException e) {
             System.out.println("Invalid input!");
             scanner.next();
