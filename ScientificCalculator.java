@@ -34,6 +34,9 @@ public class ScientificCalculator {
                 case 2:
                     performSubtraction(scanner);
                     break;
+                case 3:
+                    performMultiplication(scanner);
+                    break;
                 case 0:
                     running = false; System.out.println("Exiting...");
                     break;
@@ -49,6 +52,7 @@ public class ScientificCalculator {
         System.out.println("\n--- Scientific Calculator ---");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
     }
 
     // Reading inputs from the users for different kind of operations
@@ -58,6 +62,10 @@ public class ScientificCalculator {
 
     public static double subtract(double num1, double num2) {
         return num1 - num2;
+    }
+
+    public static double multiply(double num1, double num2) {
+        return num1 * num2;
     }
 
     //Addition method
@@ -87,5 +95,20 @@ public class ScientificCalculator {
             scanner.next();
         }
     }
+
+    //Multiplication method
+    private static void performMultiplication(Scanner scanner) {
+        try {
+            System.out.print("Enter first number: ");
+            double a = scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double b = scanner.nextDouble();
+            System.out.println("Result: " + multiply(a, b));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
+
 
 }
