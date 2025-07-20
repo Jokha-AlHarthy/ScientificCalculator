@@ -64,6 +64,15 @@ public class ScientificCalculator {
                 case 12:
                     performAbsoluteValue(scanner);
                     break;
+                case 13:
+                    performRound(scanner);
+                    break;
+                case 14:
+                    performCeiling(scanner);
+                    break;
+                case 15:
+                    performFloor(scanner);
+                    break;
                 case 0:
                     running = false; System.out.println("Exiting...");
                     break;
@@ -89,6 +98,9 @@ public class ScientificCalculator {
         System.out.println("10. Natural Logarithm (ln)");
         System.out.println("11. Logarithm Base 10 (log10)");
         System.out.println("12. Absolute Value");
+        System.out.println("13. Round");
+        System.out.println("14. Ceiling");
+        System.out.println("15. Floor");
     }
 
     // Reading inputs from the users for different kind of operations
@@ -140,6 +152,19 @@ public class ScientificCalculator {
     public static double calculateAbsoluteValue(double num) {
         return Math.abs(num);
     }
+
+    public static long roundNumber(double num) {
+        return Math.round(num);
+    }
+
+    public static double ceilingNumber(double num) {
+        return Math.ceil(num);
+    }
+
+    public static double floorNumber(double num) {
+        return Math.floor(num);
+    }
+
 
     //Addition method
     private static void performAddition(Scanner scanner) {
@@ -305,6 +330,45 @@ public class ScientificCalculator {
             scanner.next();
         }
     }
+
+    //Round method
+    private static void performRound(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("Result: " + roundNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
+
+    //Ceiling method
+    private static void performCeiling(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("Result: " + ceilingNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
+
+
+    //Floor method
+    private static void performFloor(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("Result: " + floorNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
+            scanner.next();
+        }
+    }
+
+
 
 
 }
